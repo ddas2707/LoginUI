@@ -1,12 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import WelcomScreen from './screens/WelcomScreen'
+import { NavigationContainer } from '@react-navigation/native'
+import AppNavigation from './navigation/AppNavigation'
 
 export default function App() {
   return (
-    <View style={styles.main}>
-      <Text style={styles.text}>HomegdeScreen</Text>
+    <>
+      <AppNavigation />
+    </>
 
-    </View>
   )
 }
 
