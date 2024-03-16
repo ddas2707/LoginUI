@@ -17,13 +17,14 @@ const WelcomScreen = () => {
                 <View style={styles.animation}>
                     <LottieView style={{ height: 415, paddingTop: 0 }} source={require('../assets/Animation - 1710432076745.json')} autoPlay loop />
                     <View style={styles.sbutton}>
-                        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
+                        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SignUp')}>
                             <Text style={styles.Sign}>Sign Up</Text>
                         </TouchableOpacity>
-                        <View>
-                            <Text style={{ color: 'black', fontWeight: '500' }}>Already Have an Account?
-                                <Text style={{ color: 'yellow' }}> Log In</Text>
-                            </Text>
+                        <View style={{ display: 'flex', flexDirection: 'row' }}>
+                            <Text style={{ color: 'black', fontWeight: '700', fontSize: 16 }}>Already Have an Account?</Text>
+                            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                                <Text style={{ color: 'yellow', fontWeight: '700', fontSize: 16 }}> Log In</Text>
+                            </TouchableOpacity>
                         </View>
                     </View>
 

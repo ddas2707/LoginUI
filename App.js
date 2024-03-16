@@ -1,8 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import WelcomScreen from './screens/WelcomScreen'
-import { NavigationContainer } from '@react-navigation/native'
-import AppNavigation from './navigation/AppNavigation'
+import AppNavigation from './src/navigation/AppNavigation'
+
 
 export default function App() {
   return (
