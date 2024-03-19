@@ -6,6 +6,7 @@ import WelcomScreen from "../screens/WelcomScreen";
 import LoginScreen from "../screens/LoginScreen";
 import SignUpScreen from "../screens/SignUpScreen";
 import useAuth from "../hooks/useAuth";
+import TabScreen from "../screens/TabScreen";
 
 const Stack = createNativeStackNavigator();
 export default function AppNavigation() {
@@ -13,7 +14,8 @@ export default function AppNavigation() {
     if (user) {
         return (
             <NavigationContainer>
-                <Stack.Navigator initialRouteName="Home">
+                <Stack.Navigator initialRouteName="Tab">
+                    <Stack.Screen name="Tab" component={TabScreen} options={{ headerShown: false }} />
                     <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
                 </Stack.Navigator>
             </NavigationContainer>
